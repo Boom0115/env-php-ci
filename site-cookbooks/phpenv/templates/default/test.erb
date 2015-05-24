@@ -18,7 +18,7 @@ server {
 		fastcgi_index index.php;
 		fastcgi_intercept_errors on;
 		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-<% node['nginx']['default']['fastcgi_params'].each do |key,value| -%>
+<% node['nginx']['test']['fastcgi_params'].each do |key,value| -%>
 		fastcgi_param <%= key %> <%= value %>;
 <% end %>
 	}

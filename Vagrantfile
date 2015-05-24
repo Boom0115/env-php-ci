@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
 			:nfs => false,
 			:owner => "vagrant",
 			:group => "www-data",
-			:mount_options => ["dmode=755,fmode=755"]
+			:mount_options => ["dmode=775,fmode=775"]
 		
 		sv.vm.provision :chef_solo do |chef|
 			chef.log_level = "debug"
